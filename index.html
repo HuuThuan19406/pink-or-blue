@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/Semantic/semantic.min.css">
+    <script src="index.js" async></script>
+    <title>Pink Or Blue ?</title>
+</head>
+
+<body class="ui center aligned vertical segment tertiary olive inverted">
+    <h1 class="ui grey piled segment header">
+        <span class="ui pink header">Dịu Dàng</span> hay <span class="ui blue header">Mạnh Mẽ</span>
+    </h1>
+    <div class="ui huge action input">
+        <input id="name" type="text" placeholder="Nhập tên vào đây....">
+        <button class="ui green button"
+            onclick="handlePredict(prediction(nameInput.value), male, female, maleLabel, femaleLabel)">Kiểm
+            tra</button>
+    </div>
+    <div class="ui raised padded container segment" style="margin-top: 70px;">
+        <div class="ui horizontal segments">
+            <div id="female" class="ui pink inverted segment" style="width: 50%; height: 25px; padding: 0; transition: width 1s;"></div>
+            <div id="male" class="ui blue inverted segment" style="width: 50%; padding: 0; transition: width 1s;"></div>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <i class="massive pink female icon"></i>
+                <h1 style="transition: all 1s;" id="femaleLabel">50%</h1>
+            </div>
+            <div class="column">
+                <i class="massive blue male icon"></i>
+                <h1 style="transition: all 1s;" id="maleLabel">50%</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const nameInput = document.getElementById("name");
+    const male = document.getElementById("male");
+    const female = document.getElementById("female");
+    const maleLabel = document.getElementById("maleLabel");
+    const femaleLabel = document.getElementById("femaleLabel");
+</script>
+
+</html>
