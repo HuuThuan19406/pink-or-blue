@@ -17,7 +17,7 @@ async function prediction(name) {
 function handlePredict(score, maleElement, femaleElement, maleLabel, femaleLabel) {
     score
         .then(response => {
-            maleElement.style.width = maleLabel = response.male * 100 + '%';
+            maleElement.style.width = maleLabel.innerText = response.male * 100 + '%';
             femaleElement.style.width = femaleLabel.innerText = response.female * 100 + '%';
         });
 }
